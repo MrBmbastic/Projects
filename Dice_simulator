@@ -1,0 +1,56 @@
+import random
+
+dice = {
+    1: """
+==========
+|         |
+|    O    |
+|         |
+==========
+""",
+    2: """
+==========
+|         |
+| O     O |
+|         |
+==========
+""",
+    3: """
+==========
+|    O    |
+|    O    |
+|    O    |
+==========
+""",
+    4: """
+==========
+| O     O |
+|         |
+| O     O |
+==========
+""",
+    5: """
+==========
+| O     O |
+|    O    |
+| O     O |
+==========
+""",
+    6: """
+==========
+| O     O |
+| O     O |
+| O     O |
+==========
+"""
+}
+
+print("This is a dice simulator")
+
+while True:
+    number = random.randint(1, 6)
+    print(f"The dice shows {number}.")
+    print(dice[number])
+    roll_again = input("Press 'y' to roll again: ")
+    if roll_again.lower() != "y":
+        break
